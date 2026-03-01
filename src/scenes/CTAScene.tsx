@@ -25,6 +25,8 @@ export const CTAScene: React.FC = () => {
   const urlOpacity = interpolate(frame, [40, 60], [0, 1], {
     extrapolateRight: 'clamp',
   });
+  
+  const pulseScale = 1 + Math.sin(frame * 0.1) * 0.02;
 
   return (
     <AbsoluteFill>
@@ -55,6 +57,7 @@ export const CTAScene: React.FC = () => {
             color: theme.colors.text,
             fontFamily: theme.fonts.heading,
             textAlign: 'center',
+            textShadow: `0 0 30px ${theme.colors.primary}50`,
           }}
         >
           Start your free trial today
@@ -70,6 +73,8 @@ export const CTAScene: React.FC = () => {
             background: theme.colors.backgroundLight,
             borderRadius: 12,
             border: `2px solid ${theme.colors.primary}`,
+            boxShadow: `0 0 40px ${theme.colors.primary}40, 0 0 80px ${theme.colors.primary}20`,
+            transform: `scale(${pulseScale})`,
           }}
         >
           flowstate.ai

@@ -24,7 +24,8 @@ export const Logo: React.FC<LogoProps> = ({ size = 60 }) => {
           alignItems: 'center',
           justifyContent: 'center',
           fontSize: size * 0.5,
-          boxShadow: theme.shadows.glow,
+          boxShadow: `0 0 40px ${theme.colors.primary}80, 0 0 80px ${theme.colors.primary}40, ${theme.shadows.glow}`,
+          filter: 'brightness(1.1)',
         }}
       >
         ⚡
@@ -35,6 +36,7 @@ export const Logo: React.FC<LogoProps> = ({ size = 60 }) => {
           fontSize: size * 0.6,
           fontWeight: 'bold',
           color: theme.colors.text,
+          textShadow: `0 0 20px ${theme.colors.primary}60`,
         }}
       >
         FlowState AI
