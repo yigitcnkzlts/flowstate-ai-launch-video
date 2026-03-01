@@ -1,0 +1,21 @@
+{
+  "name": "flowstate-ai-launch",
+  "version": "1.0.0",
+  "description": "FlowState AI - Developer Productivity Copilot Launch Video",
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render",
+    "render": "remotion render Root out/flowstate-ai.mp4 --overwrite"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "remotion": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

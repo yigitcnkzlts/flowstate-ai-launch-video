@@ -1,0 +1,37 @@
+{
+  "metrics": [
+    {
+      "label": "Focus Time",
+      "before": 45,
+      "after": 87,
+      "unit": "%",
+      "icon": "⏱️"
+    },
+    {
+      "label": "Code Quality",
+      "before": 62,
+      "after": 94,
+      "unit": "%",
+      "icon": "✨"
+    },
+    {
+      "label": "Daily Commits",
+      "before": 8,
+      "after": 23,
+      "unit": "",
+      "icon": "🚀"
+    },
+    {
+      "label": "Bug Resolution",
+      "before": 3.2,
+      "after": 1.1,
+      "unit": "days",
+      "icon": "🐛"
+    }
+  ],
+  "testimonials": [
+    "FlowState AI transformed how I code",
+    "3x productivity boost in first week",
+    "Finally, an AI that understands context"
+  ]
+}
