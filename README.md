@@ -30,6 +30,8 @@ npm run render
 
 Output: `out/flowstate-ai.mp4`
 
+**Note**: The video file is not included in the repository due to size. Run `npm run render` to generate it locally.
+
 ## 🛠 Tech Stack
 
 - **TypeScript** - Type-safe code
