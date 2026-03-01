@@ -9,12 +9,13 @@ import { CTAScene } from './scenes/CTAScene';
 
 export const FlowStateVideo: React.FC = () => {
   // Scene durations (in frames at 30fps)
-  const INTRO_DURATION = 90;      // 3 seconds
-  const PROBLEM_DURATION = 150;   // 5 seconds
-  const PRODUCT_DURATION = 180;   // 6 seconds
-  const DATA_DURATION = 210;      // 7 seconds
-  const IMPACT_DURATION = 150;    // 5 seconds
-  const CTA_DURATION = 180;       // 6 seconds
+  const INTRO_DURATION = 120;     // 4 seconds
+  const PROBLEM_DURATION = 240;   // 8 seconds
+  const PRODUCT_DURATION = 300;   // 10 seconds
+  const DATA_DURATION = 360;      // 12 seconds
+  const IMPACT_DURATION = 300;    // 10 seconds
+  const CTA_DURATION = 480;       // 16 seconds
+  // Total: 60 seconds (1 minute)
 
   return (
     <AbsoluteFill>

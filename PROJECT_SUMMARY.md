@@ -4,7 +4,7 @@
 
 **Project**: FlowState AI - Developer Productivity Copilot Launch Video  
 **Technology**: Remotion + TypeScript + React  
-**Duration**: 32 seconds (6 scenes)  
+**Duration**: 60 seconds (6 scenes)  
 **Status**: ✅ Complete and production-ready
 
 ## ✅ Requirements Met
@@ -78,14 +78,14 @@
 
 | Scene | Duration | Key Features |
 |-------|----------|--------------|
-| Intro | 3s | Logo animation, brand reveal |
-| Problem | 5s | Staggered text, pain points |
-| Product | 6s | Dashboard mockup, feature showcase |
-| Data | 7s | Animated metrics, spring physics |
-| Impact | 5s | Transformation messaging, glow effects |
-| CTA | 6s | Logo, URL, call-to-action |
+| Intro | 4s | Logo animation, brand reveal |
+| Problem | 8s | Staggered text, pain points |
+| Product | 10s | Dashboard mockup, feature showcase |
+| Data | 12s | Animated metrics, spring physics |
+| Impact | 10s | Transformation messaging, glow effects |
+| CTA | 16s | Logo, URL, call-to-action |
 
-**Total**: 32 seconds of cinematic content
+**Total**: 60 seconds (1 minute) of cinematic content
 
 ## 🎨 Design System
 

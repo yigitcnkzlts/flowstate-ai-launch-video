@@ -4,16 +4,16 @@ A professional 32-second product launch video created with Remotion for FlowStat
 
 ## 🎬 Video Overview
 
-**Duration**: 32 seconds (960 frames @ 30fps)  
+**Duration**: 60 seconds (1 minute / 1800 frames @ 30fps)  
 **Resolution**: 1920x1080 Full HD  
 **Scenes**: 6 cinematic compositions
 
-1. **Intro** (3s) - Logo reveal with animations
-2. **Problem** (5s) - Developer pain points
-3. **Product** (6s) - Dashboard showcase
-4. **Data** (7s) - Animated productivity metrics
-5. **Impact** (5s) - Transformation messaging
-6. **CTA** (6s) - Call-to-action
+1. **Intro** (4s) - Logo reveal with animations
+2. **Problem** (8s) - Developer pain points
+3. **Product** (10s) - Dashboard showcase
+4. **Data** (12s) - Animated productivity metrics
+5. **Impact** (10s) - Transformation messaging
+6. **CTA** (16s) - Call-to-action
 
 ## 🚀 Quick Start
 

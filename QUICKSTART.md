@@ -19,14 +19,14 @@ That's it! Your video will be at `out/flowstate-ai.mp4`
 
 ## 🎬 What You'll See
 
-6 cinematic scenes (32 seconds total):
+6 cinematic scenes (60 seconds total):
 
-1. **Intro** (3s) - FlowState AI logo reveal
-2. **Problem** (5s) - Developer pain points
-3. **Product** (6s) - Dashboard showcase
-4. **Data** (7s) - Productivity metrics animation
-5. **Impact** (5s) - Transformation messaging
-6. **CTA** (6s) - Call-to-action with URL
+1. **Intro** (4s) - FlowState AI logo reveal
+2. **Problem** (8s) - Developer pain points
+3. **Product** (10s) - Dashboard showcase
+4. **Data** (12s) - Productivity metrics animation
+5. **Impact** (10s) - Transformation messaging
+6. **CTA** (16s) - Call-to-action with URL
 
 ## 🎨 Quick Customization
 
