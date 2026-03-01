@@ -2,6 +2,12 @@
 
 Remotion, TypeScript ve React kullanılarak tamamen kod ile oluşturulmuş 60 saniyelik profesyonel ürün lansmanı videosu.
 
+## 📺 Final Video
+
+**[📥 Videoyu İndir (6 MB)](out/flowstate-ai.mp4)**
+
+> Not: GitHub'da direkt oynatılamıyor, indirip izleyebilirsiniz.
+
 ## 📋 Proje Özeti
 
 **Konsept**: FlowState AI - Geliştirici Üretkenlik Copilot'u  
