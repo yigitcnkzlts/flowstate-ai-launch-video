@@ -8,25 +8,29 @@ export const CTAScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   
-  const fadeIn = interpolate(frame, [0, 10], [0, 1], {
+  const fadeIn = interpolate(frame, [0, 15], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
   const logoScale = spring({
-    frame: frame - 5,
+    frame: frame - 10,
     fps,
     config: { damping: 12 },
   });
   
-  const logoOpacity = interpolate(frame, [0, 15], [0, 1], {
+  const logoOpacity = interpolate(frame, [0, 25], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  const ctaOpacity = interpolate(frame, [20, 35], [0, 1], {
+  const socialProofOpacity = interpolate(frame, [30, 50], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  const urlOpacity = interpolate(frame, [30, 45], [0, 1], {
+  const ctaOpacity = interpolate(frame, [60, 80], [0, 1], {
+    extrapolateRight: 'clamp',
+  });
+  
+  const urlOpacity = interpolate(frame, [90, 110], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
@@ -51,6 +55,20 @@ export const CTAScene: React.FC = () => {
           }}
         >
           <Logo size={100} />
+        </div>
+        
+        {/* Sosyal kanıt */}
+        <div
+          style={{
+            opacity: socialProofOpacity,
+            fontSize: 20,
+            color: theme.colors.textMuted,
+            fontFamily: theme.fonts.body,
+            textAlign: 'center',
+            marginTop: -20,
+          }}
+        >
+          Join 10,000+ developers worldwide
         </div>
         
         <div

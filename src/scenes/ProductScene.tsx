@@ -8,19 +8,19 @@ import { theme } from '../styles/theme';
 export const ProductScene: React.FC = () => {
   const frame = useCurrentFrame();
   
-  const fadeIn = interpolate(frame, [0, 10], [0, 1], {
+  const fadeIn = interpolate(frame, [0, 15], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  const fadeOut = interpolate(frame, [230, 250], [1, 0], {
+  const fadeOut = interpolate(frame, [340, 360], [1, 0], {
     extrapolateRight: 'clamp',
   });
   
-  const dashboardOpacity = interpolate(frame, [15, 30], [0, 1], {
+  const dashboardOpacity = interpolate(frame, [20, 40], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  const dashboardScale = interpolate(frame, [15, 35], [0.95, 1], {
+  const dashboardScale = interpolate(frame, [20, 50], [0.95, 1], {
     extrapolateRight: 'clamp',
   });
 
@@ -39,7 +39,7 @@ export const ProductScene: React.FC = () => {
         <AnimatedText
           text="FlowState AI Platform"
           delay={0}
-          duration={20}
+          duration={30}
           style={{
             fontSize: 72,
             fontWeight: 'bold',
@@ -94,7 +94,8 @@ export const ProductScene: React.FC = () => {
                 { icon: '⚡', label: 'Cycle Time', value: '-47%' },
                 { icon: '📊', label: 'KPI Improvement', value: '+68%' },
               ].map((metric, i) => {
-                const cardOpacity = interpolate(frame, [25 + i * 4, 40 + i * 4], [0, 1], { extrapolateRight: 'clamp' });
+                const cardOpacity = interpolate(frame, [40 + i * 8, 60 + i * 8], [0, 1], { extrapolateRight: 'clamp' });
+                const progressWidth = interpolate(frame, [60 + i * 8, 100 + i * 8], [0, 100], { extrapolateRight: 'clamp' });
                 return (
                   <div
                     key={i}
@@ -109,7 +110,11 @@ export const ProductScene: React.FC = () => {
                   >
                     <div style={{ fontSize: 32, marginBottom: 8 }}>{metric.icon}</div>
                     <div style={{ fontSize: 14, color: theme.colors.textMuted, marginBottom: 4 }}>{metric.label}</div>
-                    <div style={{ fontSize: 28, fontWeight: 'bold', color: theme.colors.primary }}>{metric.value}</div>
+                    <div style={{ fontSize: 28, fontWeight: 'bold', color: theme.colors.primary, marginBottom: 8 }}>{metric.value}</div>
+                    {/* Progress bar */}
+                    <div style={{ width: '100%', height: 4, background: 'rgba(99, 102, 241, 0.2)', borderRadius: 2, overflow: 'hidden' }}>
+                      <div style={{ width: `${progressWidth}%`, height: '100%', background: theme.colors.primary, transition: 'width 0.3s' }} />
+                    </div>
                   </div>
                 );
               })}
@@ -124,15 +129,22 @@ export const ProductScene: React.FC = () => {
                 border: '1px solid rgba(99, 102, 241, 0.2)',
                 fontFamily: theme.fonts.mono,
                 fontSize: 14,
-                opacity: interpolate(frame, [45, 60], [0, 1], { extrapolateRight: 'clamp' }),
+                opacity: interpolate(frame, [120, 140], [0, 1], { extrapolateRight: 'clamp' }),
               }}
             >
-              <div style={{ color: '#7dd3fc', marginBottom: 8 }}>
-                <span style={{ color: '#c084fc' }}>const</span> insights = <span style={{ color: '#34d399' }}>await</span> flowstate.<span style={{ color: '#fbbf24' }}>getAnalytics</span>();
-              </div>
-              <div style={{ color: '#7dd3fc' }}>
-                <span style={{ color: '#fb923c' }}>// Workflow automation active</span>
-              </div>
+              {/* Typing animation */}
+              {frame > 120 && (
+                <>
+                  <div style={{ color: '#7dd3fc', marginBottom: 8 }}>
+                    <span style={{ color: '#c084fc' }}>const</span> insights = <span style={{ color: '#34d399' }}>await</span> flowstate.<span style={{ color: '#fbbf24' }}>getAnalytics</span>();
+                  </div>
+                  {frame > 160 && (
+                    <div style={{ color: '#7dd3fc' }}>
+                      <span style={{ color: '#fb923c' }}>// Workflow automation active</span>
+                    </div>
+                  )}
+                </>
+              )}
             </div>
             
             {/* Alt bilgi */}
@@ -141,7 +153,7 @@ export const ProductScene: React.FC = () => {
                 fontSize: 16,
                 color: theme.colors.textMuted,
                 textAlign: 'center',
-                opacity: interpolate(frame, [65, 80], [0, 1], { extrapolateRight: 'clamp' }),
+                opacity: interpolate(frame, [180, 200], [0, 1], { extrapolateRight: 'clamp' }),
               }}
             >
               Real-time performance insights & integrations

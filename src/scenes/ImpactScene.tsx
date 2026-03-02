@@ -8,17 +8,17 @@ import { theme } from '../styles/theme';
 export const ImpactScene: React.FC = () => {
   const frame = useCurrentFrame();
   
-  const fadeIn = interpolate(frame, [0, 10], [0, 1], {
+  const fadeIn = interpolate(frame, [0, 15], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  const fadeOut = interpolate(frame, [170, 190], [1, 0], {
+  const fadeOut = interpolate(frame, [220, 240], [1, 0], {
     extrapolateRight: 'clamp',
   });
   
   const glowIntensity = interpolate(
     frame,
-    [0, 25, 50],
+    [0, 40, 80],
     [0, 1, 0.7],
     { extrapolateRight: 'clamp' }
   );
@@ -44,7 +44,7 @@ export const ImpactScene: React.FC = () => {
           <AnimatedText
             text="Optimize workflow."
             delay={0}
-            duration={20}
+            duration={30}
             style={{
               fontSize: 80,
               fontWeight: 'bold',
@@ -55,8 +55,8 @@ export const ImpactScene: React.FC = () => {
           />
           <AnimatedText
             text="Accelerate delivery."
-            delay={15}
-            duration={20}
+            delay={25}
+            duration={30}
             style={{
               fontSize: 80,
               fontWeight: 'bold',

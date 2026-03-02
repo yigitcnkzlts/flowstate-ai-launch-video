@@ -7,19 +7,19 @@ import { DataScene } from './scenes/DataScene';
 import { ImpactScene } from './scenes/ImpactScene';
 import { CTAScene } from './scenes/CTAScene';
 
-// Ana video kompozisyonu - Toplam 40 saniye (1200 frame @ 30fps) - Hızlı tempo
+// Ana video kompozisyonu - Toplam 60 saniye (1800 frame @ 30fps) - Profesyonel tempo
 export const FlowStateVideo: React.FC = () => {
   const frame = useCurrentFrame();
   
-  // Sahne süreleri (frame cinsinden, 30fps) - Ticari video hızında
-  const INTRO_DURATION = 180;     // 6 saniye
-  const PROBLEM_DURATION = 180;   // 6 saniye
-  const PRODUCT_DURATION = 240;   // 8 saniye
-  const DATA_DURATION = 210;      // 7 saniye
-  const IMPACT_DURATION = 180;    // 6 saniye
-  const CTA_DURATION = 210;       // 7 saniye
+  // Sahne süreleri (frame cinsinden, 30fps) - Profesyonel video standardı
+  const INTRO_DURATION = 240;     // 8 saniye
+  const PROBLEM_DURATION = 240;   // 8 saniye
+  const PRODUCT_DURATION = 360;   // 12 saniye
+  const DATA_DURATION = 300;      // 10 saniye
+  const IMPACT_DURATION = 240;    // 8 saniye
+  const CTA_DURATION = 420;       // 14 saniye
   const TRANSITION_FRAMES = 10;   // 0.33 saniye geçiş
-  const TOTAL_FRAMES = 1200;      // 40 saniye
+  const TOTAL_FRAMES = 1800;      // 60 saniye
   
   // Müzik volume kontrolü - fade in/out
   const musicVolume = interpolate(

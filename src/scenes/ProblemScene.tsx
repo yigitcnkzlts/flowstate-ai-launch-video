@@ -8,11 +8,11 @@ import { theme } from '../styles/theme';
 export const ProblemScene: React.FC = () => {
   const frame = useCurrentFrame();
   
-  const fadeIn = interpolate(frame, [0, 10], [0, 1], {
+  const fadeIn = interpolate(frame, [0, 15], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  const fadeOut = interpolate(frame, [170, 190], [1, 0], {
+  const fadeOut = interpolate(frame, [220, 240], [1, 0], {
     extrapolateRight: 'clamp',
   });
   
@@ -31,7 +31,7 @@ export const ProblemScene: React.FC = () => {
         <AnimatedText
           text="Long cycle times."
           delay={0}
-          duration={15}
+          duration={20}
           style={{
             fontSize: 64,
             fontWeight: 'bold',
@@ -42,8 +42,8 @@ export const ProblemScene: React.FC = () => {
         />
         <AnimatedText
           text="Context switching overhead."
-          delay={10}
-          duration={15}
+          delay={15}
+          duration={20}
           style={{
             fontSize: 64,
             fontWeight: 'bold',
@@ -54,8 +54,8 @@ export const ProblemScene: React.FC = () => {
         />
         <AnimatedText
           text="Declining KPIs."
-          delay={20}
-          duration={15}
+          delay={30}
+          duration={20}
           style={{
             fontSize: 64,
             fontWeight: 'bold',
@@ -66,8 +66,8 @@ export const ProblemScene: React.FC = () => {
         />
         <AnimatedText
           text="Your team deserves better."
-          delay={35}
-          duration={15}
+          delay={50}
+          duration={20}
           style={{
             fontSize: 36,
             color: theme.colors.textMuted,

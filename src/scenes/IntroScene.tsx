@@ -4,27 +4,27 @@ import { GradientBackground } from '../components/GradientBackground';
 import { Logo } from '../components/Logo';
 import { theme } from '../styles/theme';
 
-// IntroScene - Logo açılış sahnesi (6 saniye) - Hızlı tempo
+// IntroScene - Logo açılış sahnesi (8 saniye) - Profesyonel tempo
 export const IntroScene: React.FC = () => {
   const frame = useCurrentFrame();
   
-  // Logo hızlı büyüme
-  const logoScale = interpolate(frame, [0, 20], [0.5, 1], {
+  // Logo yumuşak büyüme
+  const logoScale = interpolate(frame, [0, 40], [0.5, 1], {
     extrapolateRight: 'clamp',
   });
   
-  // Logo hızlı fade-in
-  const logoOpacity = interpolate(frame, [0, 15], [0, 1], {
+  // Logo fade-in
+  const logoOpacity = interpolate(frame, [0, 25], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  // Slogan hızlı fade-in
-  const taglineOpacity = interpolate(frame, [15, 30], [0, 1], {
+  // Slogan fade-in
+  const taglineOpacity = interpolate(frame, [30, 50], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
   // Fade-out geçişi
-  const fadeOut = interpolate(frame, [160, 180], [1, 0], {
+  const fadeOut = interpolate(frame, [220, 240], [1, 0], {
     extrapolateRight: 'clamp',
   });
 

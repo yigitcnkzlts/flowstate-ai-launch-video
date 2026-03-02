@@ -9,15 +9,15 @@ import productivityData from '../data/productivity.json';
 export const DataScene: React.FC = () => {
   const frame = useCurrentFrame();
   
-  const fadeIn = interpolate(frame, [0, 10], [0, 1], {
+  const fadeIn = interpolate(frame, [0, 15], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  const fadeOut = interpolate(frame, [200, 220], [1, 0], {
+  const fadeOut = interpolate(frame, [280, 300], [1, 0], {
     extrapolateRight: 'clamp',
   });
   
-  const titleOpacity = interpolate(frame, [0, 15], [0, 1], {
+  const titleOpacity = interpolate(frame, [0, 20], [0, 1], {
     extrapolateRight: 'clamp',
   });
 
@@ -61,7 +61,7 @@ export const DataScene: React.FC = () => {
               value={metric.after}
               unit={metric.unit}
               icon={metric.icon}
-              delay={15 + index * 8}
+              delay={25 + index * 12}
             />
           ))}
         </div>
