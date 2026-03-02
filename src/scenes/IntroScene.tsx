@@ -4,27 +4,32 @@ import { GradientBackground } from '../components/GradientBackground';
 import { Logo } from '../components/Logo';
 import { theme } from '../styles/theme';
 
-// IntroScene - Logo açılış sahnesi (4 saniye)
+// IntroScene - Logo açılış sahnesi (6 saniye) - Hızlı tempo
 export const IntroScene: React.FC = () => {
   const frame = useCurrentFrame();
   
-  // Logo büyüme animasyonu
-  const logoScale = interpolate(frame, [0, 30], [0.5, 1], {
+  // Logo hızlı büyüme
+  const logoScale = interpolate(frame, [0, 20], [0.5, 1], {
     extrapolateRight: 'clamp',
   });
   
-  // Logo fade-in
-  const logoOpacity = interpolate(frame, [0, 20], [0, 1], {
+  // Logo hızlı fade-in
+  const logoOpacity = interpolate(frame, [0, 15], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  // Slogan fade-in
-  const taglineOpacity = interpolate(frame, [20, 40], [0, 1], {
+  // Slogan hızlı fade-in
+  const taglineOpacity = interpolate(frame, [15, 30], [0, 1], {
+    extrapolateRight: 'clamp',
+  });
+  
+  // Fade-out geçişi
+  const fadeOut = interpolate(frame, [160, 180], [1, 0], {
     extrapolateRight: 'clamp',
   });
 
   return (
-    <AbsoluteFill>
+    <AbsoluteFill style={{ opacity: fadeOut }}>
       <GradientBackground animated />
       <AbsoluteFill
         style={{
@@ -53,7 +58,7 @@ export const IntroScene: React.FC = () => {
             maxWidth: 600,
           }}
         >
-          Developer Productivity Copilot
+          Workflow Automation & Productivity Analytics
         </div>
       </AbsoluteFill>
     </AbsoluteFill>

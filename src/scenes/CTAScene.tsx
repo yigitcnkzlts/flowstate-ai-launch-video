@@ -8,28 +8,32 @@ export const CTAScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   
+  const fadeIn = interpolate(frame, [0, 10], [0, 1], {
+    extrapolateRight: 'clamp',
+  });
+  
   const logoScale = spring({
-    frame: frame - 10,
+    frame: frame - 5,
     fps,
     config: { damping: 12 },
   });
   
-  const logoOpacity = interpolate(frame, [0, 20], [0, 1], {
+  const logoOpacity = interpolate(frame, [0, 15], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  const ctaOpacity = interpolate(frame, [25, 45], [0, 1], {
+  const ctaOpacity = interpolate(frame, [20, 35], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  const urlOpacity = interpolate(frame, [40, 60], [0, 1], {
+  const urlOpacity = interpolate(frame, [30, 45], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
   const pulseScale = 1 + Math.sin(frame * 0.1) * 0.02;
 
   return (
-    <AbsoluteFill>
+    <AbsoluteFill style={{ opacity: fadeIn }}>
       <GradientBackground animated />
       <AbsoluteFill
         style={{
@@ -60,7 +64,7 @@ export const CTAScene: React.FC = () => {
             textShadow: `0 0 30px ${theme.colors.primary}50`,
           }}
         >
-          Start your free trial today
+          Start optimizing today
         </div>
         
         <div

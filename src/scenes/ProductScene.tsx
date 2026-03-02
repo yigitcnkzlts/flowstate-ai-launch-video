@@ -4,20 +4,28 @@ import { GradientBackground } from '../components/GradientBackground';
 import { AnimatedText } from '../components/AnimatedText';
 import { theme } from '../styles/theme';
 
-// AI-generated placeholder: Dashboard mockup would use AI-generated UI screenshot
+// AI-generated placeholder: Dashboard mockup - Gerçek SaaS platformu görünümü
 export const ProductScene: React.FC = () => {
   const frame = useCurrentFrame();
   
-  const dashboardOpacity = interpolate(frame, [20, 40], [0, 1], {
+  const fadeIn = interpolate(frame, [0, 10], [0, 1], {
     extrapolateRight: 'clamp',
   });
   
-  const dashboardScale = interpolate(frame, [20, 50], [0.9, 1], {
+  const fadeOut = interpolate(frame, [230, 250], [1, 0], {
+    extrapolateRight: 'clamp',
+  });
+  
+  const dashboardOpacity = interpolate(frame, [15, 30], [0, 1], {
+    extrapolateRight: 'clamp',
+  });
+  
+  const dashboardScale = interpolate(frame, [15, 35], [0.95, 1], {
     extrapolateRight: 'clamp',
   });
 
   return (
-    <AbsoluteFill>
+    <AbsoluteFill style={{ opacity: fadeIn * fadeOut }}>
       <GradientBackground />
       <AbsoluteFill
         style={{
@@ -29,9 +37,9 @@ export const ProductScene: React.FC = () => {
         }}
       >
         <AnimatedText
-          text="Meet FlowState AI"
+          text="FlowState AI Platform"
           delay={0}
-          duration={25}
+          duration={20}
           style={{
             fontSize: 72,
             fontWeight: 'bold',
@@ -82,11 +90,11 @@ export const ProductScene: React.FC = () => {
             {/* Üst metrik kartları */}
             <div style={{ display: 'flex', gap: 20 }}>
               {[
-                { icon: '🎯', label: 'Focus Score', value: '94%' },
-                { icon: '⚡', label: 'Productivity', value: '+47%' },
-                { icon: '🧠', label: 'Context Switches', value: '-68%' },
+                { icon: '🎯', label: 'Focus Time', value: '94%' },
+                { icon: '⚡', label: 'Cycle Time', value: '-47%' },
+                { icon: '📊', label: 'KPI Improvement', value: '+68%' },
               ].map((metric, i) => {
-                const cardOpacity = interpolate(frame, [30 + i * 5, 50 + i * 5], [0, 1], { extrapolateRight: 'clamp' });
+                const cardOpacity = interpolate(frame, [25 + i * 4, 40 + i * 4], [0, 1], { extrapolateRight: 'clamp' });
                 return (
                   <div
                     key={i}
@@ -116,14 +124,14 @@ export const ProductScene: React.FC = () => {
                 border: '1px solid rgba(99, 102, 241, 0.2)',
                 fontFamily: theme.fonts.mono,
                 fontSize: 14,
-                opacity: interpolate(frame, [50, 70], [0, 1], { extrapolateRight: 'clamp' }),
+                opacity: interpolate(frame, [45, 60], [0, 1], { extrapolateRight: 'clamp' }),
               }}
             >
               <div style={{ color: '#7dd3fc', marginBottom: 8 }}>
-                <span style={{ color: '#c084fc' }}>const</span> productivity = <span style={{ color: '#34d399' }}>await</span> flowstate.<span style={{ color: '#fbbf24' }}>analyze</span>();
+                <span style={{ color: '#c084fc' }}>const</span> insights = <span style={{ color: '#34d399' }}>await</span> flowstate.<span style={{ color: '#fbbf24' }}>getAnalytics</span>();
               </div>
               <div style={{ color: '#7dd3fc' }}>
-                <span style={{ color: '#fb923c' }}>// AI suggests: Take a break in 15 min</span>
+                <span style={{ color: '#fb923c' }}>// Workflow automation active</span>
               </div>
             </div>
             
@@ -133,10 +141,10 @@ export const ProductScene: React.FC = () => {
                 fontSize: 16,
                 color: theme.colors.textMuted,
                 textAlign: 'center',
-                opacity: interpolate(frame, [70, 90], [0, 1], { extrapolateRight: 'clamp' }),
+                opacity: interpolate(frame, [65, 80], [0, 1], { extrapolateRight: 'clamp' }),
               }}
             >
-              Real-time AI context awareness
+              Real-time performance insights & integrations
             </div>
           </div>
         </div>

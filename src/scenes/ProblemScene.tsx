@@ -1,13 +1,23 @@
 import React from 'react';
-import { AbsoluteFill } from 'remotion';
+import { AbsoluteFill, interpolate, useCurrentFrame } from 'remotion';
 import { GradientBackground } from '../components/GradientBackground';
 import { AnimatedText } from '../components/AnimatedText';
 import { theme } from '../styles/theme';
 
-// AI-generated marketing copy: Problem statement crafted to resonate with developers
+// AI-generated marketing copy: İş problemleri - Gerçek SaaS terminolojisi
 export const ProblemScene: React.FC = () => {
+  const frame = useCurrentFrame();
+  
+  const fadeIn = interpolate(frame, [0, 10], [0, 1], {
+    extrapolateRight: 'clamp',
+  });
+  
+  const fadeOut = interpolate(frame, [170, 190], [1, 0], {
+    extrapolateRight: 'clamp',
+  });
+  
   return (
-    <AbsoluteFill>
+    <AbsoluteFill style={{ opacity: fadeIn * fadeOut }}>
       <GradientBackground />
       <AbsoluteFill
         style={{
@@ -19,9 +29,9 @@ export const ProblemScene: React.FC = () => {
         }}
       >
         <AnimatedText
-          text="Context switching."
+          text="Long cycle times."
           delay={0}
-          duration={20}
+          duration={15}
           style={{
             fontSize: 64,
             fontWeight: 'bold',
@@ -31,9 +41,9 @@ export const ProblemScene: React.FC = () => {
           }}
         />
         <AnimatedText
-          text="Endless distractions."
-          delay={15}
-          duration={20}
+          text="Context switching overhead."
+          delay={10}
+          duration={15}
           style={{
             fontSize: 64,
             fontWeight: 'bold',
@@ -43,9 +53,9 @@ export const ProblemScene: React.FC = () => {
           }}
         />
         <AnimatedText
-          text="Lost productivity."
-          delay={30}
-          duration={20}
+          text="Declining KPIs."
+          delay={20}
+          duration={15}
           style={{
             fontSize: 64,
             fontWeight: 'bold',
@@ -55,9 +65,9 @@ export const ProblemScene: React.FC = () => {
           }}
         />
         <AnimatedText
-          text="Sound familiar?"
-          delay={50}
-          duration={20}
+          text="Your team deserves better."
+          delay={35}
+          duration={15}
           style={{
             fontSize: 36,
             color: theme.colors.textMuted,

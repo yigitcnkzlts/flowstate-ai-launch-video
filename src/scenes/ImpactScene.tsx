@@ -4,19 +4,27 @@ import { GradientBackground } from '../components/GradientBackground';
 import { AnimatedText } from '../components/AnimatedText';
 import { theme } from '../styles/theme';
 
-// AI-generated marketing copy: Impact statements
+// AI-generated marketing copy: İş etkisi - Gerçek SaaS değer önerisi
 export const ImpactScene: React.FC = () => {
   const frame = useCurrentFrame();
   
+  const fadeIn = interpolate(frame, [0, 10], [0, 1], {
+    extrapolateRight: 'clamp',
+  });
+  
+  const fadeOut = interpolate(frame, [170, 190], [1, 0], {
+    extrapolateRight: 'clamp',
+  });
+  
   const glowIntensity = interpolate(
     frame,
-    [0, 30, 60],
+    [0, 25, 50],
     [0, 1, 0.7],
     { extrapolateRight: 'clamp' }
   );
 
   return (
-    <AbsoluteFill>
+    <AbsoluteFill style={{ opacity: fadeIn * fadeOut }}>
       <GradientBackground animated />
       <AbsoluteFill
         style={{
@@ -34,9 +42,9 @@ export const ImpactScene: React.FC = () => {
           }}
         >
           <AnimatedText
-            text="Code without chaos."
+            text="Optimize workflow."
             delay={0}
-            duration={25}
+            duration={20}
             style={{
               fontSize: 80,
               fontWeight: 'bold',
@@ -46,9 +54,9 @@ export const ImpactScene: React.FC = () => {
             }}
           />
           <AnimatedText
-            text="Ship with confidence."
-            delay={20}
-            duration={25}
+            text="Accelerate delivery."
+            delay={15}
+            duration={20}
             style={{
               fontSize: 80,
               fontWeight: 'bold',
