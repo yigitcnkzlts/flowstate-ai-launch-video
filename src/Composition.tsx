@@ -31,12 +31,13 @@ export const FlowStateVideo: React.FC = () => {
 
   return (
     <AbsoluteFill>
-      {/* Arka plan müziği - Fade in/out ile */}
-      <Audio 
+      {/* Arka plan müziği - Müzik dosyası eklendiğinde aktif olacak */}
+      {/* Müzik eklemek için: public/music.mp3 dosyasını ekle ve bu yorumu kaldır */}
+      {/* <Audio 
         src={staticFile('music.mp3')} 
         volume={musicVolume}
         startFrom={0}
-      />
+      /> */}
       
       {/* Sahne 1: Logo açılışı */}
       <Sequence durationInFrames={INTRO_DURATION}>
