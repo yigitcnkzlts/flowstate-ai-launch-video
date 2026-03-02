@@ -44,7 +44,17 @@ npm run build
 
 ## 🎵 Arka Plan Müziği
 
-Müzik entegrasyonu hazır. `public/music.mp3` dosyasını ekleyin ve `src/Composition.tsx` içindeki yorum satırını kaldırın.
+**ÖNEMLİ**: Müzik dosyası eklenmeli!
+
+1. Ücretsiz müzik indir: https://uppbeat.io/ (ticari kullanım için ücretsiz)
+2. Dosyayı `public/music.mp3` olarak kaydet
+3. Render et: `npm run build`
+
+Müzik özellikleri:
+- Otomatik fade-in (ilk 1 saniye)
+- Otomatik fade-out (son 2 saniye)
+- Volume: 0.3 (dengeli)
+- Stil: Minimal electronic / corporate tech
 
 Detaylar: `public/MUSIC_PLACEHOLDER.md`
 
