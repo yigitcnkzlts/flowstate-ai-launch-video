@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, Sequence } from 'remotion';
+import { AbsoluteFill, Sequence, Audio, staticFile, interpolate, useCurrentFrame } from 'remotion';
 import { IntroScene } from './scenes/IntroScene';
 import { ProblemScene } from './scenes/ProblemScene';
 import { ProductScene } from './scenes/ProductScene';
@@ -7,8 +7,10 @@ import { DataScene } from './scenes/DataScene';
 import { ImpactScene } from './scenes/ImpactScene';
 import { CTAScene } from './scenes/CTAScene';
 
-// Ana video kompozisyonu - Toplam 45 saniye (1350 frame @ 30fps) - Hızlı tempo
+// Ana video kompozisyonu - Toplam 40 saniye (1200 frame @ 30fps) - Hızlı tempo
 export const FlowStateVideo: React.FC = () => {
+  const frame = useCurrentFrame();
+  
   // Sahne süreleri (frame cinsinden, 30fps) - Ticari video hızında
   const INTRO_DURATION = 180;     // 6 saniye
   const PROBLEM_DURATION = 180;   // 6 saniye
@@ -17,12 +19,24 @@ export const FlowStateVideo: React.FC = () => {
   const IMPACT_DURATION = 180;    // 6 saniye
   const CTA_DURATION = 210;       // 7 saniye
   const TRANSITION_FRAMES = 10;   // 0.33 saniye geçiş
+  const TOTAL_FRAMES = 1200;      // 40 saniye
+  
+  // Müzik volume kontrolü - fade in/out
+  const musicVolume = interpolate(
+    frame,
+    [0, 30, TOTAL_FRAMES - 60, TOTAL_FRAMES - 30],
+    [0, 0.3, 0.3, 0],
+    { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }
+  );
 
   return (
     <AbsoluteFill>
-      {/* Arka plan müziği - Tüm video boyunca */}
-      {/* TODO: public/music.mp3 dosyasını ekle */}
-      {/* <Audio src={staticFile('music.mp3')} volume={0.3} /> */}
+      {/* Arka plan müziği - Fade in/out ile */}
+      <Audio 
+        src={staticFile('music.mp3')} 
+        volume={musicVolume}
+        startFrom={0}
+      />
       
       {/* Sahne 1: Logo açılışı */}
       <Sequence durationInFrames={INTRO_DURATION}>
