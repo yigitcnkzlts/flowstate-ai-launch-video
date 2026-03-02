@@ -43,7 +43,7 @@ export const DataScene: React.FC = () => {
             marginBottom: 80,
           }}
         >
-          Performance Metrics
+          DORA Metrics Dashboard
         </div>
         
         <div

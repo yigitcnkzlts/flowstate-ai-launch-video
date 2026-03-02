@@ -90,9 +90,9 @@ export const ProductScene: React.FC = () => {
             {/* Üst metrik kartları */}
             <div style={{ display: 'flex', gap: 20 }}>
               {[
-                { icon: '🎯', label: 'Focus Time', value: '94%' },
-                { icon: '⚡', label: 'Cycle Time', value: '-47%' },
-                { icon: '📊', label: 'KPI Improvement', value: '+68%' },
+                { icon: '⚡', label: 'Lead Time', value: '1.2d' },
+                { icon: '🚀', label: 'Deploy Frequency', value: '8.7/wk' },
+                { icon: '✅', label: 'Change Failure', value: '4%' },
               ].map((metric, i) => {
                 const cardOpacity = interpolate(frame, [40 + i * 8, 60 + i * 8], [0, 1], { extrapolateRight: 'clamp' });
                 const progressWidth = interpolate(frame, [60 + i * 8, 100 + i * 8], [0, 100], { extrapolateRight: 'clamp' });
@@ -156,7 +156,7 @@ export const ProductScene: React.FC = () => {
                 opacity: interpolate(frame, [180, 200], [0, 1], { extrapolateRight: 'clamp' }),
               }}
             >
-              Real-time performance insights & integrations
+              DORA metrics tracking & workflow automation
             </div>
           </div>
         </div>

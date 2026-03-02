@@ -58,7 +58,7 @@ export const IntroScene: React.FC = () => {
             maxWidth: 600,
           }}
         >
-          Workflow Automation & Productivity Analytics
+          DevOps Performance & DORA Metrics Platform
         </div>
       </AbsoluteFill>
     </AbsoluteFill>

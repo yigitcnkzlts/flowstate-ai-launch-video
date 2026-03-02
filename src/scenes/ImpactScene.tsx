@@ -42,7 +42,7 @@ export const ImpactScene: React.FC = () => {
           }}
         >
           <AnimatedText
-            text="Optimize workflow."
+            text="Reduce lead time."
             delay={0}
             duration={30}
             style={{
@@ -54,7 +54,7 @@ export const ImpactScene: React.FC = () => {
             }}
           />
           <AnimatedText
-            text="Accelerate delivery."
+            text="Increase velocity."
             delay={25}
             duration={30}
             style={{

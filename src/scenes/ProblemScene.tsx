@@ -29,7 +29,7 @@ export const ProblemScene: React.FC = () => {
         }}
       >
         <AnimatedText
-          text="Long cycle times."
+          text="High lead times."
           delay={0}
           duration={20}
           style={{
@@ -41,7 +41,7 @@ export const ProblemScene: React.FC = () => {
           }}
         />
         <AnimatedText
-          text="Context switching overhead."
+          text="Low deployment frequency."
           delay={15}
           duration={20}
           style={{
@@ -53,7 +53,7 @@ export const ProblemScene: React.FC = () => {
           }}
         />
         <AnimatedText
-          text="Declining KPIs."
+          text="Rising failure rates."
           delay={30}
           duration={20}
           style={{
@@ -65,7 +65,7 @@ export const ProblemScene: React.FC = () => {
           }}
         />
         <AnimatedText
-          text="Your team deserves better."
+          text="Your DevOps needs optimization."
           delay={50}
           duration={20}
           style={{

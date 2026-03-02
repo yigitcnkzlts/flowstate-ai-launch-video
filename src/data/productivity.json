@@ -1,32 +1,32 @@
 {
   "metrics": [
     {
-      "label": "Focus Time",
-      "before": 45,
-      "after": 87,
-      "unit": "%",
-      "icon": "⏱️"
+      "label": "Lead Time",
+      "before": 4.8,
+      "after": 1.2,
+      "unit": "days",
+      "icon": "⚡"
     },
     {
-      "label": "Code Quality",
-      "before": 62,
-      "after": 94,
-      "unit": "%",
-      "icon": "✨"
-    },
-    {
-      "label": "Daily Commits",
-      "before": 8,
-      "after": 23,
-      "unit": "",
+      "label": "Deployment Frequency",
+      "before": 2.3,
+      "after": 8.7,
+      "unit": "/week",
       "icon": "🚀"
     },
     {
-      "label": "Bug Resolution",
+      "label": "Change Failure Rate",
+      "before": 18,
+      "after": 4,
+      "unit": "%",
+      "icon": "✅"
+    },
+    {
+      "label": "MTTR",
       "before": 3.2,
-      "after": 1.1,
-      "unit": "days",
-      "icon": "🐛"
+      "after": 0.8,
+      "unit": "hours",
+      "icon": "🔧"
     }
   ],
   "testimonials": [

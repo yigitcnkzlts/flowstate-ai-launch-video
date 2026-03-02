@@ -4,7 +4,7 @@ Remotion, TypeScript ve React kullanılarak tamamen kod ile oluşturulmuş 40 sa
 
 ## 📋 Proje Özeti
 
-**Konsept**: FlowState AI - Workflow Automation & Productivity Analytics  
+**Konsept**: FlowState AI - DevOps Performance & DORA Metrics Platform  
 **Süre**: 60 saniye (1 dakika - gereksinim karşılandı)  
 **Çözünürlük**: 1920x1080 Full HD  
 **Teknoloji**: Remotion 4.0 + TypeScript 5.0 + React 18.2
@@ -18,7 +18,7 @@ Remotion, TypeScript ve React kullanılarak tamamen kod ile oluşturulmuş 40 sa
 - ✅ Ticari kalite tasarım
 - ✅ AI entegrasyonu
 - ✅ Data-driven içerik
-- ✅ Gerçek SaaS terminolojisi
+- ✅ Profesyonel business terminolojisi (DORA Metrics)
 - ✅ Hızlı tempo ve geçişler
 
 ## 🚀 Hızlı Başlangıç
@@ -35,11 +35,11 @@ npm run build
 
 | Sahne | Süre | Açıklama |
 |-------|------|----------|
-| Intro | 8sn | Logo ve slogan |
-| Problem | 8sn | İş problemleri (KPI, cycle time) |
-| Ürün | 12sn | Dashboard + metrikler + typing animation |
-| Data | 10sn | Performans metrikleri + progress bars |
-| Etki | 8sn | İş değeri |
+| Intro | 8sn | Logo ve slogan (DORA Metrics Platform) |
+| Problem | 8sn | DevOps problemleri (lead time, deployment frequency) |
+| Ürün | 12sn | Dashboard + DORA metrikleri + typing animation |
+| Data | 10sn | DORA Metrics Dashboard + progress bars |
+| Etki | 8sn | İş değeri (reduce lead time, increase velocity) |
 | CTA | 14sn | Harekete geçirici mesaj + sosyal kanıt |
 
 ## 🎵 Arka Plan Müziği
